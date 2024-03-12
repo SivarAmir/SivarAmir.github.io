@@ -89,7 +89,7 @@
     height: 50px;
     border-radius: 50%;
     position: relative;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
   }
 
   .nav__icon {
@@ -99,7 +99,7 @@
 
   .nav__name {
     position: absolute;
-    right: 100%;
+    right: 0;
     background-color: var(--first-color);
     height: 100%;
     line-height: 50px;
