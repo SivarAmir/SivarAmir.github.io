@@ -122,6 +122,7 @@ img {
   font-weight: var(--weight-500);
   position: relative;
   overflow: hidden;
+  cursor: pointer;
   transition: all 0.24s ease-out;
 }
 
