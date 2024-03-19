@@ -4,6 +4,8 @@ import Info from "../../components/Info";
 import "./about.css";
 import Stats from "../../components/Stats";
 import Skills from "../../components/Skills";
+import { resume } from "../../data";
+import ResumeItem from "../../components/ResumeItem";
 
 function About() {
   return (
@@ -18,7 +20,7 @@ function About() {
             <ul className="info__list grid">
               <Info />
             </ul>
-            <a href="" className="button">
+            <a href="" className="button" download>
               Download CV
               <span className="button__icon">
                 <FaDownload />
@@ -38,6 +40,27 @@ function About() {
         </div>
       </section>
       <div className="separator"></div>
+      <section className="resume">
+        <h3 className="section__subtitle subtitle__center">
+          Experience & Education
+        </h3>
+        <div className="resume__container gird">
+          <div className="resume__data">
+            {resume
+              .filter((item) => item.category == "experience")
+              .map((item, index) => {
+                return <ResumeItem key={index} item={item} />;
+              })}
+          </div>
+          <div className="resume__data">
+            {resume
+              .filter((item) => item.category == "education")
+              .map((item, index) => {
+                return <ResumeItem key={index} item={item} />;
+              })}
+          </div>
+        </div>
+      </section>
     </main>
   );
 }
