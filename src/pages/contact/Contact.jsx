@@ -6,7 +6,7 @@ import {
   FaFacebookF,
   FaInstagram,
   FaLinkedinIn,
-  FaTwitter,
+  FaGithub,
 } from "react-icons/fa";
 
 import { FiSend } from "react-icons/fi";
@@ -52,28 +52,32 @@ function Contact() {
 
           <div className="contact__socials">
             <a
+              target="_blank"
               href="https://www.instagram.com/sivar_amir2/"
               className="contact__social-link"
             >
               <FaInstagram />
             </a>
             <a
+              target="_blank"
               href="https://www.linkedin.com/in/sivar-amir-728842242/"
               className="contact__social-link"
             >
               <FaLinkedinIn />
             </a>
             <a
+              target="_blank"
               href="https://www.facebook.com/sevar.mantk.7/"
               className="contact__social-link"
             >
               <FaFacebookF />
             </a>
             <a
-              href="https://twitter.com/i/flow/login?redirect_after_login=%2Fi%2Fflow%2Flogin"
+              target="_blank"
+              href="https://github.com/SivarAmir"
               className="contact__social-link"
             >
-              <FaTwitter />
+              <FaGithub />
             </a>
           </div>
         </div>
