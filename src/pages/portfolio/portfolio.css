@@ -116,3 +116,44 @@
   border-radius: 10px;
   margin-bottom: 24px;
 }
+
+.portfolio__hover .item__icon {
+  color: white;
+}
+
+.portfolio__hover a,
+.portfolio__modal {
+  display: none;
+}
+
+@media only screen and (max-width: 990px) {
+  .portfolio__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  /* .portfolio__modal {
+    display: none;
+  } */
+
+  .portfolio__item:hover .portfolio__title {
+    transform: translateY(50px);
+  }
+
+  /* .portfolio__hover a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  } */
+}
+
+@media only screen and (max-width: 700px) {
+  .portfolio__container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .section__title {
+    font-size: 40px;
+  }
+}

@@ -13,8 +13,6 @@ import Work1 from "./assets/project-1.jpeg";
 import Work2 from "./assets/project-2.jpg";
 import Work3 from "./assets/project-3.jpeg";
 import Work4 from "./assets/project-4.jpeg";
-import Work5 from "./assets/project-5.jpg";
-import Work6 from "./assets/project-6.jpg";
 
 import Theme1 from "./assets/purple.png";
 import Theme2 from "./assets/red.png";
@@ -116,26 +114,20 @@ export const personalInfo = [
 export const stats = [
   {
     id: 1,
-    no: "1+",
+    no: 1,
     title: "Years of <br /> Experience",
   },
 
   {
     id: 2,
-    no: "5+",
+    no: 3,
     title: "Completed <br /> Projects",
   },
 
   {
     id: 3,
-    no: "81+",
+    no: 2,
     title: "Happy <br /> Customers",
-  },
-
-  {
-    id: 4,
-    no: "53+",
-    title: " Awards <br /> Won",
   },
 ];
 
@@ -144,54 +136,19 @@ export const resume = [
     id: 1,
     category: "experience",
     icon: <FaBriefcase />,
-    year: "2018 - PRESENT",
-    title: "Web Developer <span> Envato </span>",
-    desc: "Lorem ipsum dolor sit amet, consectetur tempor incididunt ut labore adipisicing elit,",
+    year: "2023 - PRESENT",
+    title: "Web Developer <span> TechnoBase, </span>",
+    desc: "Developed and implemented responsive web designs using HTML, CSS, and JavaScript to improve user experience and accessibility across multiple platforms.",
   },
 
   {
     id: 2,
-    category: "experience",
-    icon: <FaBriefcase />,
-    year: "2013 - 2018",
-    title: "UI/UX Designer <span> Themeforest </span>",
-    desc: "Lorem incididunt dolor sit amet, consectetur eiusmod dunt doldunt dol elit, tempor incididunt",
-  },
-
-  {
-    id: 3,
-    category: "experience",
-    icon: <FaBriefcase />,
-    year: "2005 - 2013",
-    title: "Consultant <span> Videohive </span>",
-    desc: "Lorem ipsum dolor sit amet, tempor incididunt ut laboreconsectetur elit, sed do eiusmod tempor duntt",
-  },
-
-  {
-    id: 4,
     category: "education",
     icon: <FaGraduationCap />,
-    year: "2015",
-    title: "Engineering Degree <span> Oxford University </span>",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do tempor incididunt ut labore",
-  },
-
-  {
-    id: 5,
-    category: "education",
-    icon: <FaGraduationCap />,
-    year: "2012",
-    title: "Master Degree <span> KIEV University </span>",
-    desc: "Lorem incididunt dolor sit amet, consectetur eiusmod dunt doldunt dol elit, tempor incididunt",
-  },
-
-  {
-    id: 6,
-    category: "education",
-    icon: <FaGraduationCap />,
-    year: "2009",
-    title: "Bachelor Degree <span> Tunis High School </span>",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor ut labore",
+    year: "2021 - Present",
+    title:
+      "Bachelor of Software Engineering <span> Salahaddin University-Erbil </span>",
+    desc: "The Bachelor of Software Engineering program at the College of Engineering, Salahaddin University-Erbil, is designed to equip students with the theoretical knowledge and practical skills necessary for a successful career in software development and engineering.",
   },
 ];
 
@@ -199,49 +156,47 @@ export const skills = [
   {
     id: 1,
     title: "Html",
-    percentage: "25",
+    percentage: "100",
   },
 
   {
     id: 2,
-    title: "Javascript",
-    percentage: "89",
+    title: "Css",
+    percentage: "100",
   },
 
   {
     id: 3,
-    title: "Css",
-    percentage: "70",
+    title: "Javascript",
+    percentage: "85",
   },
 
   {
     id: 4,
     title: "Php",
-    percentage: "66",
+    percentage: "60",
   },
 
   {
     id: 5,
-    title: "Wordpress",
-    percentage: "95",
-  },
-
-  {
-    id: 6,
     title: "Jquery",
     percentage: "50",
   },
 
   {
-    id: 7,
-    title: "Angular",
-    percentage: "65",
-  },
-
-  {
-    id: 8,
+    id: 6,
     title: "React",
-    percentage: "45",
+    percentage: "80",
+  },
+  {
+    id: 7,
+    title: "java",
+    percentage: "80",
+  },
+  {
+    id: 7,
+    title: "tailwindCss",
+    percentage: "80",
   },
 ];
 
@@ -249,7 +204,7 @@ export const portfolio = [
   {
     id: 1,
     img: Work1,
-    title: "Photo Editing",
+    title: "Website Design",
     details: [
       {
         icon: <FiFileText />,
@@ -305,7 +260,7 @@ export const portfolio = [
   {
     id: 3,
     img: Work3,
-    title: "Video Editing",
+    title: "Website Design",
     details: [
       {
         icon: <FiFileText />,
@@ -333,7 +288,7 @@ export const portfolio = [
   {
     id: 4,
     img: Work4,
-    title: "Video Editing",
+    title: "Website Design",
     details: [
       {
         icon: <FiFileText />,
@@ -354,58 +309,6 @@ export const portfolio = [
         icon: <FiExternalLink />,
         title: "Preview : ",
         desc: "www.dribble.com",
-      },
-    ],
-  },
-
-  {
-    id: 5,
-    img: Work5,
-    title: "Landing Page",
-    details: [
-      {
-        title: "Project : ",
-        desc: "Website",
-      },
-      {
-        title: "Client : ",
-        desc: "Dribble",
-      },
-      {
-        title: "Language : ",
-        desc: "React JS, Node JS",
-      },
-      {
-        title: "Preview : ",
-        desc: "www.dribble.com",
-      },
-    ],
-  },
-
-  {
-    id: 6,
-    img: Work6,
-    title: "Photo Editing",
-    details: [
-      {
-        icon: <FiFileText />,
-        title: "Project : ",
-        desc: "Photo",
-      },
-      {
-        icon: <FiUser />,
-        title: "Client : ",
-        desc: "Dribble",
-      },
-      {
-        icon: <FaCode />,
-        title: "Language : ",
-        desc: "Adobe Photoshop",
-      },
-      {
-        icon: <FiExternalLink />,
-        title: "Preview : ",
-        desc: "www.dibble.com",
       },
     ],
   },

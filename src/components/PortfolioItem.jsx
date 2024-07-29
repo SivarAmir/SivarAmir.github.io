@@ -14,6 +14,12 @@ function PortfolioItem({ img, title, details }) {
 
       <div className="portfolio__hover" onClick={() => toggleModal()}>
         <h3 className="portfolio__title">{title}</h3>
+        <a href="#">
+          <spna className="item__icon">{details[details.length - 1].icon}</spna>
+          <span className="item__details">
+            {details[details.length - 1].desc}
+          </span>
+        </a>
       </div>
 
       {modalIsOpen && (
@@ -35,7 +41,13 @@ function PortfolioItem({ img, title, details }) {
                     <spna className="item__icon">{icon}</spna>
                     <div>
                       <span className="item__title">{title}</span>
-                      <span className="item__details">{desc}</span>
+                      {index === details.length - 1 ? (
+                        <a href="#">
+                          <span className="item__details">{desc}</span>
+                        </a>
+                      ) : (
+                        <span className="item__details">{desc}</span>
+                      )}
                     </div>
                   </li>
                 );

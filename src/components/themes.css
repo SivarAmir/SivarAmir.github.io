@@ -83,3 +83,7 @@
   top: 2%;
   right: 15px;
 }
+
+.style__switcher div {
+  z-index: 2;
+}

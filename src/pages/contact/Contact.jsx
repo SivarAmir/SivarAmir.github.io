@@ -1,4 +1,5 @@
 import React from "react";
+import { motion as m } from "framer-motion";
 
 import {
   FaEnvelopeOpen,
@@ -16,69 +17,78 @@ import "./contact.css";
 
 function Contact() {
   return (
-    <section className="contact section">
+    <m.section
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.75, ease: "easeOut" }}
+      className="contact section"
+    >
       <h2 className="section__title">
         Get In <span>Touch</span>
       </h2>
 
       <div className="contact__container container grid">
         <div className="contact__data">
-          <h3 className="contact__title">Don't be Shy !</h3>
+          <div>
+            <h3 className="contact__title">Don't be Shy !</h3>
 
-          <p className="contact__description">
-            Feel free to get in touch with me. I am always open to discussing
-            new projects, creative ideas or opportunities to be part of your
-            visions.
-          </p>
-
-          <div className="contact__info">
-            <div className="info__item">
-              <FaEnvelopeOpen className="info__icon" />
-              <div>
-                <span className="info__title">Mail me</span>
-                <br />
-                <h4 className="info__desc">{personalInfo[7].description}</h4>
-              </div>
-            </div>
-            <div className="info__item">
-              <FaPhoneSquareAlt className="info__icon" />
-              <div>
-                <span className="info__title">Call me</span>
-                <br />
-                <h4 className="info__desc">{personalInfo[6].description}</h4>
-              </div>
-            </div>
+            <p className="contact__description">
+              Feel free to get in touch with me. I am always open to discussing
+              new projects, creative ideas or opportunities to be part of your
+              visions.
+            </p>
           </div>
 
-          <div className="contact__socials">
-            <a
-              target="_blank"
-              href="https://www.instagram.com/sivar_amir2/"
-              className="contact__social-link"
-            >
-              <FaInstagram />
-            </a>
-            <a
-              target="_blank"
-              href="https://www.linkedin.com/in/sivar-amir-728842242/"
-              className="contact__social-link"
-            >
-              <FaLinkedinIn />
-            </a>
-            <a
-              target="_blank"
-              href="https://www.facebook.com/sevar.mantk.7/"
-              className="contact__social-link"
-            >
-              <FaFacebookF />
-            </a>
-            <a
-              target="_blank"
-              href="https://github.com/SivarAmir"
-              className="contact__social-link"
-            >
-              <FaGithub />
-            </a>
+          <div>
+            <div className="contact__info">
+              <div className="info__item">
+                <FaEnvelopeOpen className="info__icon" />
+                <div>
+                  <span className="info__title">Mail me</span>
+                  <br />
+                  <h4 className="info__desc">{personalInfo[7].description}</h4>
+                </div>
+              </div>
+              <div className="info__item">
+                <FaPhoneSquareAlt className="info__icon" />
+                <div>
+                  <span className="info__title">Call me</span>
+                  <br />
+                  <h4 className="info__desc">{personalInfo[6].description}</h4>
+                </div>
+              </div>
+            </div>
+
+            <div className="contact__socials">
+              <a
+                target="_blank"
+                href="https://www.instagram.com/sivar_amir2/"
+                className="contact__social-link"
+              >
+                <FaInstagram />
+              </a>
+              <a
+                target="_blank"
+                href="https://www.linkedin.com/in/sivar-amir-728842242/"
+                className="contact__social-link"
+              >
+                <FaLinkedinIn />
+              </a>
+              <a
+                target="_blank"
+                href="https://www.facebook.com/sevar.mantk.7/"
+                className="contact__social-link"
+              >
+                <FaFacebookF />
+              </a>
+              <a
+                target="_blank"
+                href="https://github.com/SivarAmir"
+                className="contact__social-link"
+              >
+                <FaGithub />
+              </a>
+            </div>
           </div>
         </div>
         <form className="contact__form">
@@ -113,15 +123,15 @@ function Contact() {
             ></textarea>
           </div>
 
-          <button className="button">
-            Send Message{" "}
+          <a className="button" href="">
+            Send Message
             <span className="button__icon contact__button-icon">
               <FiSend />
             </span>
-          </button>
+          </a>
         </form>
       </div>
-    </section>
+    </m.section>
   );
 }
 

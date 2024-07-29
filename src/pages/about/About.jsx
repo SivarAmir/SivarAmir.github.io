@@ -6,10 +6,16 @@ import Stats from "../../components/Stats";
 import Skills from "../../components/Skills";
 import { resume } from "../../data";
 import ResumeItem from "../../components/ResumeItem";
+import { motion as m } from "framer-motion";
 
 function About() {
   return (
-    <main className="section container">
+    <m.main
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.75, ease: "easeOut" }}
+      className="section container"
+    >
       <section className="about">
         <h2 className="section__title">
           About <span>Me</span>
@@ -20,7 +26,12 @@ function About() {
             <ul className="info__list grid">
               <Info />
             </ul>
-            <a href="" className="button" download>
+
+            <a
+              className="button"
+              href="/public/sivarAmir.pdf"
+              download="Sivar-Amir.pdf"
+            >
               Download CV
               <span className="button__icon">
                 <FaDownload />
@@ -41,7 +52,7 @@ function About() {
       </section>
       <div className="separator"></div>
       <section className="resume">
-        <h3 className="section__subtitle subtitle__center">
+        <h3 className="section__subtitle subtitle__center ">
           Experience & Education
         </h3>
         <div className="resume__container gird">
@@ -52,6 +63,7 @@ function About() {
                 return <ResumeItem key={index} item={item} />;
               })}
           </div>
+
           <div className="resume__data">
             {resume
               .filter((item) => item.category == "education")
@@ -61,7 +73,7 @@ function About() {
           </div>
         </div>
       </section>
-    </main>
+    </m.main>
   );
 }
 

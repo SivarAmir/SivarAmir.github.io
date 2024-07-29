@@ -8,6 +8,7 @@ import About from "./pages/about/About";
 import Portfolio from "./pages/portfolio/Portfolio";
 import Navbar from "./components/Navbar";
 import Themes from "./components/Themes";
+import { AnimatePresence } from "framer-motion";
 
 function App() {
   return (

@@ -4,26 +4,32 @@ import ThemeItem from "./ThemeItem";
 import { FaCog } from "react-icons/fa";
 import { BsSun, BsMoon } from "react-icons/bs";
 import "./themes.css";
+import { useSelector } from "react-redux";
 
 const getStorageColor = () => {
-  let color = "hsl(252,35%,51%)";
+  let color = "";
   if (localStorage.getItem("color")) {
     color = localStorage.getItem("color");
+  } else {
+    color = "hsl(252,35%,51%)";
   }
 
   return color;
 };
 
 const getStorageTheme = () => {
-  let theme = "light__theme";
+  let theme = "";
   if (localStorage.getItem("theme")) {
     theme = localStorage.getItem("theme");
+  } else {
+    theme = "light__theme";
   }
 
   return theme;
 };
 
 function Themes() {
+  const show = useSelector((state) => state.navShow.value);
   const [showSwitcher, setShowSwitcher] = useState(false);
   const [color, setColor] = useState(getStorageColor);
   const [theme, setTheme] = useState(getStorageTheme);
@@ -52,38 +58,42 @@ function Themes() {
 
   return (
     <div>
-      <div
-        className={`style__switcher ${
-          showSwitcher === true ? "show__switcher" : ""
-        }`}
-      >
+      {show ? (
+        <></>
+      ) : (
         <div
-          className="style__switcher-toggler"
-          onClick={() => setShowSwitcher(!showSwitcher)}
+          className={`style__switcher ${
+            showSwitcher === true ? "show__switcher" : ""
+          }`}
         >
-          <FaCog />
-        </div>
+          <div
+            className="style__switcher-toggler"
+            onClick={() => setShowSwitcher(!showSwitcher)}
+          >
+            <FaCog />
+          </div>
 
-        <div className="theme__toggler" onClick={() => togglerTheme()}>
-          {theme == "light__theme" ? <BsMoon /> : <BsSun />}
-        </div>
+          <div className="theme__toggler" onClick={() => togglerTheme()}>
+            {theme == "light__theme" ? <BsMoon /> : <BsSun />}
+          </div>
 
-        <h3 className="style__switcher-title">Style Switcher</h3>
-        <div className="style__switcher-items">
-          {themes.map((theme, index) => {
-            return (
-              <ThemeItem key={index} {...theme} changeColor={changeColor} />
-            );
-          })}
-        </div>
+          <h3 className="style__switcher-title">Style Switcher</h3>
+          <div className="style__switcher-items">
+            {themes.map((theme, index) => {
+              return (
+                <ThemeItem key={index} {...theme} changeColor={changeColor} />
+              );
+            })}
+          </div>
 
-        <div
-          className="style__switcher-close"
-          onClick={() => setShowSwitcher(false)}
-        >
-          &times;
+          <div
+            className="style__switcher-close"
+            onClick={() => setShowSwitcher(false)}
+          >
+            &times;
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 }
